@@ -1,4 +1,6 @@
-﻿namespace AOCsharp2022.Day2 {
+﻿using System.Diagnostics;
+
+namespace AOCsharp2022.Day2 {
     public class DayTwo : BaseSolution {
         public DayTwo(string inputFilePath) : base(inputFilePath) { }
 
@@ -60,6 +62,28 @@
 
                 totalScore += RoundScore(myMove, opponentMove);
             });
+
+            //Shorter variation based on clever pattern matching stolen from a colleague.
+            //int score = File.ReadAllLines($"D:\\AOC2022\\Inputs\\{inputFilePath}")
+            //    .Select(line => {
+            //        return line switch {
+            //            "A X" => 3, // Rock, Scissor
+            //            "B X" => 1, // Paper, Rock
+            //            "C X" => 2, // Scissor, Paper
+            //                        // Draw: 3
+            //            "A Y" => 4, // Rock, Rock
+            //            "B Y" => 5, // Paper, Paper
+            //            "C Y" => 6, // Scissor, Scissor
+            //                        // Win: 6
+            //            "A Z" => 8, // Rock, Paper
+            //            "B Z" => 9, // Paper, Scissor
+            //            "C Z" => 7, // Scissor, Rock
+            //            _ => throw new NotImplementedException(line)
+            //        };
+            //    })
+            //    .Sum();
+
+            //Console.WriteLine($"First: {totalScore}, second: {score}");
 
             return totalScore.ToString();
         }
