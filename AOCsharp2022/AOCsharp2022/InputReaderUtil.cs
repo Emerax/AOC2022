@@ -6,5 +6,13 @@
                 lineProcessAction(line);
             }
         }
+
+        public static string[] RawLines(string inputFilePath) {
+            return File.ReadAllLines($"D:\\AOC2022\\Inputs\\{inputFilePath}");
+        }
+
+        public static string RawText(string inputFilePath) {
+            return File.ReadAllText($"D:\\AOC2022\\Inputs\\{inputFilePath}");
+        }
     }
 }
