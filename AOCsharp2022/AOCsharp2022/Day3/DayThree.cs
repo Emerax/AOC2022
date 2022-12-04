@@ -22,10 +22,8 @@ namespace AOCsharp2022.Day3 {
             List<char> itemTypes = new("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray());
             int elfIndex = 0;
             InputReaderUtil.ProcessInput(inputFilePath, (line) => {
-                //Console.WriteLine($"Elf index: {elfIndex}");
                 itemTypes.RemoveAll(c => !line.Contains(c));
                 if(elfIndex == 2) {
-                    //Console.WriteLine(itemTypes.Count);
                     total += char.IsUpper(itemTypes[0]) ? itemTypes[0] % 32 + 26 : itemTypes[0] % 32;
                     itemTypes = new("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray());
                     elfIndex = 0;
