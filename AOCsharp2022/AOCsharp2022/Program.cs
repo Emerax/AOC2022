@@ -2,6 +2,8 @@
 using AOCsharp2022.Day2;
 using AOCsharp2022.Day3;
 using AOCsharp2022.Day4;
+using AOCsharp2022.Day5;
+using AOCsharp2022.Day6;
 
 namespace AOCsharp2022 {
     public class Program {
@@ -18,9 +20,17 @@ namespace AOCsharp2022 {
             //dayThree.SolvePart1();
             //dayThree.SolvePart2();
 
-            DayFour dayFour = new("DayFour.txt");
+            //DayFour dayFour = new("DayFour.txt");
             //dayFour.SolvePart1();
-            dayFour.SolvePart2();
+            //dayFour.SolvePart2();
+
+            //DayFive dayFive = new("DayFive.txt");
+            //dayFive.SolvePart1();
+            //dayFive.SolvePart2();
+
+            DaySix daySix = new("DaySix.txt");
+            //daySix.SolvePart1();
+            daySix.SolvePart2();    
         }
     }
 }
